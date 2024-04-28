@@ -1,0 +1,146 @@
+<!DOCTYPE html> <html lang="ar" dir="rtl"> <head> <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>problem sloving</title>
+   <link rel="stylesheet" href="../style.css">
+   <link rel="stylesheet" href="../animation.css">
+   <link rel="stylesheet" href="table.css">
+
+   <link
+   rel="stylesheet"
+   href="../mobile-screen.css"
+   media="(max-width: 800px)"
+ />  
+  <script src="../jquery-3.6.0.min.js"></script>
+    
+    </head> 
+    <body> 
+      <!-- show-when-mobile -->
+      <header class="show-when-mobile">
+        <!-- <h1>&#129505;&#x1F4AA;وسارعوا &#x1F4AA;&#129505; </h1> -->
+  
+        <label  class="absolute" for="burger">
+          <i  class="fas fa-bars"><img src="../menu-bar.png" alt="menu"></i>
+        </label>
+  
+        <input  id="burger" type="checkbox" />
+  
+        <div class="show-on-click">
+          <div class="main-div">
+            
+            <label for="html">الاهداف الاسبوعية</label>
+            <input id="html" type="checkbox">
+  
+            <ul class="sub-div">
+              <li><a href="../index.html">الصفحة الرئيسية</a></li>
+              <li><a href="../pages/quran.html">الورد اليومي</a></li>
+              <li><a href="../pages/program.html">اساسيات البرمجة</a></li>
+              <li><a href="../pages/study.html">Study</a></li>
+              
+            </ul>
+          </div>
+  
+        <li class="main-list">
+              <a class="main-link" href="#">اهداف شهرية</a>
+    
+              <ul class="sub-ul">
+                <li><a target="_blank" href="../pages/month/month.html">الاسبوع الاول</a></li>
+                <li><a target="_blank" href="../pages/month/monthTwo.html">الاسبوع الثاني</a></li>
+                <li><a target="_blank" href="../pages/month/monthThree.html">الاسبوع الثالث</a></li>
+                <li><a target="_blank" href="../pages/month/monthFour.html">الاسبوع الرابع</a></li>
+              </ul>
+            </li>
+  
+          
+  
+          <div class="main-div">
+            <label for="js"><a href="./yeer.html">الاهداف السنوية</a></label>
+              <input id="js" type="checkbox">
+          </div>
+        </div>
+      </header>
+  
+       <center><h2>Problen Sloving</h2></center>
+              
+         <button style="background-color: #3e8e41; 
+        font-size: 13px;
+         color:  white;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;
+        padding: 5px 10px;
+        margin-left: 2px;
+        border-radius: 3px;
+        transition: all 0.3s ease-in-out;" id="add-btn">Add Row</button>   
+    
+  
+        <table id="myTableNewCourse">
+          <thead>
+            <tr>
+            
+              <th>تاريخ</th>
+              <th>حلقات</th>
+              <th>التاسك</th>
+              <th>الحالة</th>
+              <th>الاجراءت</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2</td>
+              <td>John</td>
+              <td>John</td>
+              <td>قيد التنفيذ</td>
+              <td>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table> 
+  
+    
+<footer>
+  Designed and developed by Ahmed Naeem
+<span>🖤</span>
+</footer>
+<script>
+  $(document).ready(function() {
+  // Load table data from localStorage
+  if (localStorage.getItem('tableDataNewCourse')) {
+    $('#myTableNewCourse tbody').html(localStorage.getItem('tableDataNewCourse'));
+  }
+
+  // add row
+  $('#add-btn').click(function() {
+    var newRow = '<tr><td>-</td>-<td>-</td><td>-</td><td>قيد التنفيذ</td><td><button class="edit-btn">Edit</button><button class="delete-btn">Delete</button></td></tr>';
+    $('#myTableNewCourse tbody').append(newRow);
+    updateLocalStorageQuran();
+  });
+
+  // edit row
+  $('#myTableNewCourse').on('click', '.edit-btn', function() {
+    var row = $(this).closest('tr');
+    if ($(this).text() == 'Edit') {
+      row.find('td').not(':last-child').attr('contentEditable', true);
+      $(this).text('Save');
+    } else {
+      row.find('td').not(':last-child').attr('contentEditable', false);
+      $(this).text('Edit');
+      updateLocalStorageQuran();
+    }
+  });
+
+  // delete row
+  $('#myTableNewCourse').on('click', '.delete-btn', function() {
+    $(this).closest('tr').remove();
+    updateLocalStorageQuran();
+  });
+
+  // Update localStorage with table data
+  function updateLocalStorageQuran() {
+    localStorage.setItem('tableDataNewCourse', $('#myTableNewCourse tbody').html());
+  }
+});
+</script>
+    </body> </html>
