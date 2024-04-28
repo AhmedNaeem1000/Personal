@@ -1,0 +1,245 @@
+
+
+
+.show-when-mobile {
+  display: block;
+  width: 100%;
+}
+
+.hide-when-mobile {
+  display: none;
+}
+
+/* ====================================
+    1. Font Awesom hamburger menu
+======================================= */
+
+h1 {
+  margin-right: 80px;
+
+}
+
+header{
+  background-color: #000000;
+  text-align: center;
+}
+
+
+.absolute {
+  position: absolute;
+  top: 0;
+  right: -10px;
+}
+
+input {
+  display: none;
+}
+
+.fa-bars {
+  font-size: 30px;
+  transform: scaleX(1.4);
+  
+
+}
+
+
+
+.fas{
+  position: absolute;
+  right: 10vw;
+  color: #000000;
+
+}
+
+/* ====================================
+    2. show on click
+======================================= */
+
+.show-on-click {
+  display: none;
+  border-top: 2px solid black;
+height: 320px;
+color: #fff;
+}
+
+
+#burger:checked + .show-on-click {
+  display: block;
+}
+
+label{
+  font-size: 22px;
+  /* border: 2px solid red; */
+  display: block;
+  padding: 20px;
+
+
+
+}
+
+label:hover,
+.fa-bars:hover,
+.sub-div li a:hover,
+
+label:hover .fas
+
+{
+  color: rgb(255, 255, 255);
+  letter-spacing: 2px;
+}
+
+
+.sub-div li a{
+  margin-right:10px;  
+  display: block;
+
+}
+
+.main-div{
+  border-bottom: 2px solid black;
+
+
+}
+
+/* ====================================
+    3. sub of div
+======================================= */
+
+.sub-div {
+  display: none;
+}
+
+#html:checked + .sub-div,
+#css:checked + .sub-div,
+#js:checked + .sub-div {
+  display: block;
+}
+
+
+.sub-div li{
+  font-size: 17px;
+  padding: 10px 0 10px 35px;
+}
+
+
+ body{
+  background: rgb(241, 241, 241);
+} 
+
+
+/* ====================================
+    3. sub sub of css
+======================================= */
+.sub-sub-div{
+  display: none;
+  margin-top: 17px;
+}
+
+#mini:checked + .sub-sub-div{
+  display: block;
+}
+
+
+.mini-projects{
+  padding: 0;
+  text-align: center;
+}
+
+h1{
+  padding: 15px;
+  color: rgb(0, 0, 0);
+}
+
+
+
+
+/* ====================================
+    4. MAIN
+    ======================================= */
+
+    h2{
+
+      margin-top: 40px;
+      color: #000000;
+    }
+
+
+main{
+
+margin-top: -100px;
+  color: rgb(0, 0, 0);
+}
+
+
+
+/* ====================================
+    # MAIN #
+======================================= */
+
+
+
+
+
+
+
+th, td {
+  padding: 4px;
+  text-align: center;
+  font-size:20px;
+  
+
+  
+}
+
+
+
+.edit-btn {
+  background-color: #4CAF50;
+  color: white;
+  display: block;
+  border: none;
+  cursor: pointer;
+  width:53px;
+  margin-bottom: 5px;
+  padding: 3px 5px;
+  font-size: 13px;
+  margin-right:5px;
+  float: left;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.delete-btn{
+  background-color: rgb(63, 27, 27);
+  color: white;
+  border: none;
+  cursor: pointer;
+  width:53px;
+  margin-bottom: 5px;
+  padding: 2px 5px;
+  font-size: 13px;
+  float: left;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+#add-btn {
+  background-color: #3e8e41;
+  color: rgb(63, 27, 27);
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 10px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+footer{
+
+  background-color: rgb(0, 0, 0);;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 15px;
+  width: 100%;
+}
